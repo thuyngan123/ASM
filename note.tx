@@ -1,0 +1,7 @@
+-Giao diện em sử dụng admin sử dụng Antd
+Bài ASM em làm được một số chức năng:
+-Thêm,sửa,xóa sản phẩm
+-Hiển thị được danh mục ở giao diện
+-Tìm kiếm sản phẩm thông qua tên
+-Đăng kí,đăng nhập,Authorization
+-Upload được ảnh lên Cloundinary

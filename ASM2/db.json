@@ -1,0 +1,418 @@
+{
+  "products": [
+    {
+      "Name": "Iphone",
+      "Price": "1234678",
+      "Image": {
+        "file": {
+          "uid": "rc-upload-1680735725697-6",
+          "lastModified": 1676785835807,
+          "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+          "name": "s4.png",
+          "size": 4536,
+          "type": "image/png",
+          "percent": 0,
+          "originFileObj": {
+            "uid": "rc-upload-1680735725697-6"
+          },
+          "error": {
+            "status": 404,
+            "method": "post",
+            "url": ""
+          },
+          "response": "",
+          "status": "error"
+        },
+        "fileList": [
+          {
+            "uid": "rc-upload-1680735725697-6",
+            "lastModified": 1676785835807,
+            "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+            "name": "s4.png",
+            "size": 4536,
+            "type": "image/png",
+            "percent": 0,
+            "originFileObj": {
+              "uid": "rc-upload-1680735725697-6"
+            },
+            "error": {
+              "status": 404,
+              "method": "post",
+              "url": ""
+            },
+            "response": "",
+            "status": "error"
+          }
+        ]
+      },
+      "Description": "Chuẩn nun nè",
+      "CategoryId": 2,
+      "id": 22
+    },
+    {
+      "Name": "Iphone",
+      "Price": "1234678",
+      "Image": {
+        "file": {
+          "uid": "rc-upload-1680735725697-6",
+          "lastModified": 1676785835807,
+          "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+          "name": "s4.png",
+          "size": 4536,
+          "type": "image/png",
+          "percent": 0,
+          "originFileObj": {
+            "uid": "rc-upload-1680735725697-6"
+          },
+          "error": {
+            "status": 404,
+            "method": "post",
+            "url": ""
+          },
+          "response": "",
+          "status": "error"
+        },
+        "fileList": [
+          {
+            "uid": "rc-upload-1680735725697-6",
+            "lastModified": 1676785835807,
+            "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+            "name": "s4.png",
+            "size": 4536,
+            "type": "image/png",
+            "percent": 0,
+            "originFileObj": {
+              "uid": "rc-upload-1680735725697-6"
+            },
+            "error": {
+              "status": 404,
+              "method": "post",
+              "url": ""
+            },
+            "response": "",
+            "status": "error"
+          }
+        ]
+      },
+      "Description": "Chuẩn nun nè",
+      "CategoryId": 2,
+      "id": 22
+    },
+    {
+      "Name": "Iphone",
+      "Price": "1234678",
+      "Image": {
+        "file": {
+          "uid": "rc-upload-1680735725697-6",
+          "lastModified": 1676785835807,
+          "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+          "name": "s4.png",
+          "size": 4536,
+          "type": "image/png",
+          "percent": 0,
+          "originFileObj": {
+            "uid": "rc-upload-1680735725697-6"
+          },
+          "error": {
+            "status": 404,
+            "method": "post",
+            "url": ""
+          },
+          "response": "",
+          "status": "error"
+        },
+        "fileList": [
+          {
+            "uid": "rc-upload-1680735725697-6",
+            "lastModified": 1676785835807,
+            "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+            "name": "s4.png",
+            "size": 4536,
+            "type": "image/png",
+            "percent": 0,
+            "originFileObj": {
+              "uid": "rc-upload-1680735725697-6"
+            },
+            "error": {
+              "status": 404,
+              "method": "post",
+              "url": ""
+            },
+            "response": "",
+            "status": "error"
+          }
+        ]
+      },
+      "Description": "Chuẩn nun nè",
+      "CategoryId": 2,
+      "id": 22
+    },
+    {
+      "Name": "Iphone",
+      "Price": "1234678",
+      "Image": {
+        "file": {
+          "uid": "rc-upload-1680735725697-6",
+          "lastModified": 1676785835807,
+          "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+          "name": "s4.png",
+          "size": 4536,
+          "type": "image/png",
+          "percent": 0,
+          "originFileObj": {
+            "uid": "rc-upload-1680735725697-6"
+          },
+          "error": {
+            "status": 404,
+            "method": "post",
+            "url": ""
+          },
+          "response": "",
+          "status": "error"
+        },
+        "fileList": [
+          {
+            "uid": "rc-upload-1680735725697-6",
+            "lastModified": 1676785835807,
+            "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+            "name": "s4.png",
+            "size": 4536,
+            "type": "image/png",
+            "percent": 0,
+            "originFileObj": {
+              "uid": "rc-upload-1680735725697-6"
+            },
+            "error": {
+              "status": 404,
+              "method": "post",
+              "url": ""
+            },
+            "response": "",
+            "status": "error"
+          }
+        ]
+      },
+      "Description": "Chuẩn nun nè",
+      "CategoryId": 2,
+      "id": 22
+    },
+    {
+      "Name": "Iphone",
+      "Price": "1234678",
+      "Image": {
+        "file": {
+          "uid": "rc-upload-1680735725697-6",
+          "lastModified": 1676785835807,
+          "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+          "name": "s4.png",
+          "size": 4536,
+          "type": "image/png",
+          "percent": 0,
+          "originFileObj": {
+            "uid": "rc-upload-1680735725697-6"
+          },
+          "error": {
+            "status": 404,
+            "method": "post",
+            "url": ""
+          },
+          "response": "",
+          "status": "error"
+        },
+        "fileList": [
+          {
+            "uid": "rc-upload-1680735725697-6",
+            "lastModified": 1676785835807,
+            "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+            "name": "s4.png",
+            "size": 4536,
+            "type": "image/png",
+            "percent": 0,
+            "originFileObj": {
+              "uid": "rc-upload-1680735725697-6"
+            },
+            "error": {
+              "status": 404,
+              "method": "post",
+              "url": ""
+            },
+            "response": "",
+            "status": "error"
+          }
+        ]
+      },
+      "Description": "Chuẩn nun nè",
+      "CategoryId": 2,
+      "id": 22
+    },
+    {
+      "Name": "Iphone",
+      "Price": "1234678",
+      "Image": {
+        "file": {
+          "uid": "rc-upload-1680735725697-6",
+          "lastModified": 1676785835807,
+          "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+          "name": "s4.png",
+          "size": 4536,
+          "type": "image/png",
+          "percent": 0,
+          "originFileObj": {
+            "uid": "rc-upload-1680735725697-6"
+          },
+          "error": {
+            "status": 404,
+            "method": "post",
+            "url": ""
+          },
+          "response": "",
+          "status": "error"
+        },
+        "fileList": [
+          {
+            "uid": "rc-upload-1680735725697-6",
+            "lastModified": 1676785835807,
+            "lastModifiedDate": "2023-02-19T05:50:35.807Z",
+            "name": "s4.png",
+            "size": 4536,
+            "type": "image/png",
+            "percent": 0,
+            "originFileObj": {
+              "uid": "rc-upload-1680735725697-6"
+            },
+            "error": {
+              "status": 404,
+              "method": "post",
+              "url": ""
+            },
+            "response": "",
+            "status": "error"
+          }
+        ]
+      },
+      "Description": "Chuẩn nun nè",
+      "CategoryId": 2,
+      "id": 22
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Điện thoại"
+    },
+    {
+      "id": 2,
+      "name": "Laptop"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Thuy Ngan",
+      "email": "Nganltph19795@fpt.edu.vn",
+      "password": "1234sdf"
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "ngan@gamil.com",
+      "password": "12345",
+      "id": 11
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "admin@gmail.com",
+      "password": "12345",
+      "id": 12
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "ngan@gamil.com",
+      "password": "12345",
+      "id": 13
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "fghj@gamil.com",
+      "password": "12345",
+      "id": 14
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "fghj@gamil.com",
+      "password": "12345",
+      "id": 15
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "fghj@gamil.com",
+      "password": "12345",
+      "id": 16
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "fghj@gamil.com",
+      "password": "12345",
+      "id": 17
+    },
+    {
+      "LA THÚY NGÂN": "",
+      "id": 18
+    },
+    {
+      "LA THÚY NGÂN": "",
+      "id": 19
+    },
+    {
+      "LA THÚY NGÂN": "",
+      "id": 20
+    },
+    {
+      "LA THÚY NGÂN": "",
+      "id": 21
+    },
+    {
+      "LA THÚY NGÂN": "",
+      "id": 22
+    },
+    {
+      "LA THÚY NGÂN": "",
+      "id": 23
+    },
+    {
+      "LA THÚY NGÂN": "",
+      "id": 24
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "thuyngan\"gmail.com",
+      "password": "12345",
+      "id": 25
+    },
+    {
+      "name": "LA THÚY NGÂN",
+      "email": "admin\"gmail.com",
+      "password": "12345",
+      "id": 26
+    },
+    {
+      "nganltph19795@fpt.edu.vn": "",
+      "id": 27
+    },
+    {
+      "nganltph19795@fpt.edu.vn": "",
+      "id": 28
+    },
+    {
+      "nganltph19795@fpt.edu.vn": "",
+      "id": 29
+    },
+    {
+      "nganltph19795@fpt.edu.vn": "",
+      "id": 30
+    },
+    {
+      "nganltph19795@fpt.edu.vn": "",
+      "id": 31
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 4,
+      "name": "Nganlt",
+      "price": 123,
+      "description": "ưerttgvc"
+    },
+    {
+      "id": 6,
+      "name": "Thuyth",
+      "price": 123,
+      "description": "cxmkdmv"
+    },
+    {
+      "id": 7,
+      "name": "Tienlt",
+      "price": 321,
+      "description": "gfsscfa"
+    }
+  ]
+}
