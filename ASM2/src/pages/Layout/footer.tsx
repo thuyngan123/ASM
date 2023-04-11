@@ -62,8 +62,25 @@ const footer = (props: Props) => {
                         </div>
                     </div>
                 </div>
+                {/* <div className="row">
+                    <div className="col-lg-12">
+                        {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+                {/* <div className="footer__copyright__text">
+                            <p>Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made with <i className="fa fa-heart" aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                            </p>
+                        </div> */}
+                {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+                {/* </div> */}
+
+                {/* </div> */}
             </div>
         </footer>
+            {/* <!-- Footer Section End -->
+
+    <!-- Search Begin --> */}
             <div className="search-model">
                 <div className="h-100 d-flex align-items-center justify-content-center">
                     <div className="search-close-switch">+</div>

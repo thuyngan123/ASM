@@ -60,7 +60,6 @@ const Header = (props: Props) => {
                         <div className="col-lg-3">
                             <div className="header__right">
                                 <div className="header__right__auth">
-                                    {/* <a href="#">Login</a> */}
                                     <Link to="/auth/Login">Login</Link>
                                     <Link to="/auth/signup">Resgister</Link>
 
@@ -82,19 +81,6 @@ const Header = (props: Props) => {
                     </div>
                 </div>
             </header >
-            {/* <!-- Header Section End -->
-
-    <!-- Categories Section Begin --> */}
-            {/* <header className="categories" > */}
-            <div className="container-fluid">
-                <div className="row">
-                    <img src="https://intphcm.com/data/upload/tieu-de-banner-thoi-trang.jpg" alt="" width="1000px" height="900px" />
-                    <div className="col-lg-6 p-0">
-
-                    </div>
-
-                </div>
-            </div>
 
         </Fragment >
 

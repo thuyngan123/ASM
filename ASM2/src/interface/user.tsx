@@ -1,11 +1,16 @@
 export interface IUser {
-    _id: number | string,
-    name: string,
+    _id?: number | string,
+    name?: string,
     email: string,
-    password: string,
-    // confirmpassword: string,
+    password: string | number,
+    // confirmpassword: string | number,
+    role: String
 }
-export interface ILogin {
-    email: string,
-    password: string,
+export interface ISignup {
+    user: IUser[],
+    onSignup: (user: IUser) => void
+}
+export interface ISignin {
+    onSignin: (users: IUser) => void
+
 }

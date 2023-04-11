@@ -11,6 +11,7 @@ type Props = {}
 const HomePage = (props: ICategory) => {
     return (
         <div>
+            {/* <Header /> */}
             <ProductsPage />
             <Footer />
         </div>

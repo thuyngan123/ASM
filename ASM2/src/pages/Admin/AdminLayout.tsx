@@ -29,7 +29,7 @@ function getItem(
 
 const items: MenuItem[] = [
     // getItem('Option 1', '1', <PieChartOutlined />),
-    getItem('Dashboard', '2', <DesktopOutlined />),
+    // getItem('Dashboard', '2', <DesktopOutlined />, <Link to={'/admin'} />),
     getItem('Quản lí sản phẩm', 'sub1', <UserOutlined />, [
         getItem('Danh sách sản phẩm', '3', <Link to={'/admin/products'} />),
         getItem('Thêm sản phẩm', '4', <Link to={'/admin/products/add'} />),
@@ -37,8 +37,11 @@ const items: MenuItem[] = [
     ]),
     getItem('Quản lí danh mục', 'sub2', <TeamOutlined />,
         [getItem('Danh sách danh mục', '6', <Link to={'/admin/categories'} />),
-        getItem('Thêm danh mục', '6')]),
-    getItem('Quản lí tài khoản', '9', <FileOutlined />),
+        getItem('Thêm danh mục', '6', <Link to={'/admin/categories/addcategory'} />)]),
+    getItem('Quản lí tài khoản', 'sub2', <TeamOutlined />,
+        [getItem('Admin', '6', <Link to={'/admin/products'} />),
+        getItem('Member', '6', <Link to={'/'} />)]),
+
 ];
 
 
@@ -57,10 +60,10 @@ const AdminLayout: React.FC = () => {
             <Layout className="site-layout">
                 <Header style={{ padding: 0, background: colorBgContainer }} />
                 <Content style={{ margin: '0 16px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
+                    {/* <Breadcrumb style={{ margin: '16px 0' }}>
                         <Breadcrumb.Item>User</Breadcrumb.Item>
                         <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
+                    </Breadcrumb> */}
                     <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
                         < Outlet />
                     </div>

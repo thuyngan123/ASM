@@ -11,22 +11,36 @@ interface DataType {
     name: String,
 }
 interface ICategoryList {
-    categories: ICategory[]
+    categories: ICategory[],
+    removeCategory: (id: number) => void
 }
 
 const Category = (props: ICategoryList) => {
+    const RemoveCategory = (id: number) => {
+        props.removeCategory(id);
+    }
     const columns: ColumnsType<DataType> = [
-
-        {
-            title: 'Id',
-            dataIndex: '_id',
-            key: '_id',
-        },
         {
             title: 'Name',
             dataIndex: 'name',
             key: 'name',
         },
+        {
+            title: "Action",
+            dataIndex: '',
+            key: 'action',
+            render: (record) => (
+                <Space size="middle">
+                    <div>
+                        <Button type="primary" onClick={() => RemoveCategory(record._id)}>Xóa</Button>
+                    </div>
+
+
+                </Space>
+
+            )
+
+        }
     ];
     const data: DataType[] = props.categories.map((item: ICategory) => {
         return {
@@ -35,6 +49,7 @@ const Category = (props: ICategoryList) => {
 
         }
     })
+
 
     return (
         <div> <Table columns={columns} dataSource={data} pagination={{ pageSize: 5 }} /></div>

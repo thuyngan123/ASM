@@ -1,24 +1,39 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { IProduct } from '../interface/product';
+import { ICategory } from '../interface/category';
+import { getAllCategory } from '../api/category';
+import Footer from './Layout/footer';
+import Header from './Layout/Header';
+
 
 interface IProps {
     products: IProduct[];
+    // category: ICategory[]
 
 }
 
 const ProductsDetails = (props: IProps) => {
+    const text = {
+        "margin-top": 10
+    }
     const { id } = useParams()
     const [product, setProduct] = useState<IProduct>()
+    // const [categories, setCategories] = useState<ICategory>()
     useEffect(() => {
 
         const currentProduct = props.products.find((item: any) => item._id === (id));
         setProduct(currentProduct);
 
 
-    }, []);
+    })
+    // useEffect(() => {
+    //     getAllCategory().then(({ data }) => setCategories(data));
+    // }, [])
     return (
         <div>
+            <Header />
+            {/* <h2>CHI TIẾT SẢN PHẨM</h2> */}
             <section className="product-details spad">
                 <div className="container">
                     <div className="row">
@@ -26,18 +41,21 @@ const ProductsDetails = (props: IProps) => {
                             <div className="product__details__pic">
                                 <div className="product__details__pic__left product__thumb nice-scroll">
                                     <a className="pt active" href="#product-1">
+                                        <img src={`${product?.images}`} alt="" />
+                                    </a>
+                                    <a className="pt" href="#product-2">
                                         <img src={product?.images} alt="" />
                                     </a>
                                     <a className="pt" href="#product-2">
                                         <img src={product?.images} alt="" />
                                     </a>
+
+
                                 </div>
                                 <div className="product__details__slider__content">
                                     <div className="product__details__pic__slider owl-carousel">
                                         <img className="product__big__img" src={product?.images} alt="" />
-                                        <img className="product__big__img" src={product?.images} alt="" />
-                                        <img className="product__big__img" src={product?.images} alt="" />
-                                        <img className="product__big__img" src={product?.images} alt="" />
+
                                     </div>
                                 </div>
                             </div>
@@ -54,6 +72,8 @@ const ProductsDetails = (props: IProps) => {
                                     <span>( 138 reviews )</span>
                                 </div>
                                 <div className="product__details__price">{product?.Price}</div>
+                                {/* <p>Nemo enim ipsam voluptatem quia aspernatur aut odit aut loret fugit, sed quia consequuntur
+                                    magni lores eos qui ratione voluptatem sequi nesciunt.</p> */}
                                 <div className="product__details__button">
                                     <div className="quantity">
                                         <span>Quantity:</span>
@@ -72,7 +92,7 @@ const ProductsDetails = (props: IProps) => {
                                         <li>
                                             <span>Availability:</span>
                                             <div className="stock__checkbox">
-                                                <label for="stockin">
+                                                <label>
                                                     In Stock
                                                     <input type="checkbox" id="stockin" />
                                                     <span className="checkmark"></span>
@@ -82,15 +102,15 @@ const ProductsDetails = (props: IProps) => {
                                         <li>
                                             <span>Available color:</span>
                                             <div className="color__checkbox">
-                                                <label for="red">
+                                                <label >
                                                     <input type="radio" name="color__radio" id="red" checked />
                                                     <span className="checkmark"></span>
                                                 </label>
-                                                <label for="black">
+                                                <label >
                                                     <input type="radio" name="color__radio" id="black" />
                                                     <span className="checkmark black-bg"></span>
                                                 </label>
-                                                <label for="grey">
+                                                <label >
                                                     <input type="radio" name="color__radio" id="grey" />
                                                     <span className="checkmark grey-bg"></span>
                                                 </label>
@@ -99,19 +119,19 @@ const ProductsDetails = (props: IProps) => {
                                         <li>
                                             <span>Available size:</span>
                                             <div className="size__btn">
-                                                <label for="xs-btn" className="active">
+                                                <label className="active">
                                                     <input type="radio" id="xs-btn" />
                                                     xs
                                                 </label>
-                                                <label for="s-btn">
+                                                <label >
                                                     <input type="radio" id="s-btn" />
                                                     s
                                                 </label>
-                                                <label for="m-btn">
+                                                <label >
                                                     <input type="radio" id="m-btn" />
                                                     m
                                                 </label>
-                                                <label for="l-btn">
+                                                <label>
                                                     <input type="radio" id="l-btn" />
                                                     l
                                                 </label>
@@ -167,7 +187,8 @@ const ProductsDetails = (props: IProps) => {
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6">
                             <div className="product__item">
-                                <div className="product__item__pic set-bg" data-setbg="img/product/related/rp-1.jpg">
+                                <div className="product__item__pic set-bg">
+                                    <img src="https://img.ltwebstatic.com/images3_pi/2022/05/19/16529298335c05e097da57dbc20eade6d71f79feb4_thumbnail_405x552.webp" alt="" />
                                     <div className="label new">New</div>
                                     <ul className="product__hover">
                                         <li><a href="img/product/related/rp-1.jpg" className="image-popup"><span className="arrow_expand"></span></a></li>
@@ -190,7 +211,8 @@ const ProductsDetails = (props: IProps) => {
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6">
                             <div className="product__item">
-                                <div className="product__item__pic set-bg" data-setbg="img/product/related/rp-2.jpg">
+                                <div className="product__item__pic set-bg" >
+                                    <img src="https://img.ltwebstatic.com/images3_pi/2022/05/23/1653282746a02f1dcb1b77898d9363b3fc724046a5_thumbnail_405x552.webp" alt="" />
                                     <ul className="product__hover">
                                         <li><a href="img/product/related/rp-2.jpg" className="image-popup"><span className="arrow_expand"></span></a></li>
                                         <li><a href="#"><span className="icon_heart_alt"></span></a></li>
@@ -213,6 +235,7 @@ const ProductsDetails = (props: IProps) => {
                         <div className="col-lg-3 col-md-4 col-sm-6">
                             <div className="product__item">
                                 <div className="product__item__pic set-bg" data-setbg="img/product/related/rp-3.jpg">
+                                    <img src="https://img.ltwebstatic.com/images3_pi/2021/09/01/16304794641bb839913aad90dcea06681660e34fd8_thumbnail_405x552.webp" alt="" />
                                     <div className="label stockout">out of stock</div>
                                     <ul className="product__hover">
                                         <li><a href="img/product/related/rp-3.jpg" className="image-popup"><span className="arrow_expand"></span></a></li>
@@ -236,6 +259,7 @@ const ProductsDetails = (props: IProps) => {
                         <div className="col-lg-3 col-md-4 col-sm-6">
                             <div className="product__item">
                                 <div className="product__item__pic set-bg" data-setbg="img/product/related/rp-4.jpg">
+                                    <img src="https://img.ltwebstatic.com/images3_pi/2023/01/10/16733203940c19feb8c94e65ba3efd786fbace77b5_thumbnail_405x552.webp" alt="" />
                                     <ul className="product__hover">
                                         <li><a href="img/product/related/rp-4.jpg" className="image-popup"><span className="arrow_expand"></span></a></li>
                                         <li><a href="#"><span className="icon_heart_alt"></span></a></li>
@@ -257,64 +281,10 @@ const ProductsDetails = (props: IProps) => {
                         </div>
                     </div>
                 </div>
+
             </section>
-            {/* <div className="instagram">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-lg-2 col-md-4 col-sm-4 p-0">
-                            <img src="https://datacare.vn/wp-content/uploads/2020/11/Banner-Thoi-Trang-NA1611202014.jpg" />
-                            <div className="instagram__item set-bg"  >
+            <Footer />
 
-                                <div className="instagram__text">
-
-                                    <i className="fa fa-instagram"></i>
-                                    <a href="#">@ ashion_shop</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-4 col-sm-4 p-0">
-                            <div className="instagram__item set-bg" data-setbg="img/instagram/insta-2.jpg">
-                                <div className="instagram__text">
-                                    <i className="fa fa-instagram"></i>
-                                    <a href="#">@ ashion_shop</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-4 col-sm-4 p-0">
-                            <div className="instagram__item set-bg" data-setbg="img/instagram/insta-3.jpg">
-                                <div className="instagram__text">
-                                    <i className="fa fa-instagram"></i>
-                                    <a href="#">@ ashion_shop</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-4 col-sm-4 p-0">
-                            <div className="instagram__item set-bg" data-setbg="img/instagram/insta-4.jpg">
-                                <div className="instagram__text">
-                                    <i className="fa fa-instagram"></i>
-                                    <a href="#">@ ashion_shop</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-4 col-sm-4 p-0">
-                            <div className="instagram__item set-bg" data-setbg="img/instagram/insta-5.jpg">
-                                <div className="instagram__text">
-                                    <i className="fa fa-instagram"></i>
-                                    <a href="#">@ ashion_shop</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-4 col-sm-4 p-0">
-                            <div className="instagram__item set-bg" data-setbg="img/instagram/insta-6.jpg">
-                                <div className="instagram__text">
-                                    <i className="fa fa-instagram"></i>
-                                    <a href="#">@ ashion_shop</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </div>
     )
 }

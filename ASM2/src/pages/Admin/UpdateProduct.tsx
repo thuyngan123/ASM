@@ -42,55 +42,40 @@ const UpdateProduct = (props: any) => {
     }, [props]);
     const onHandleSubmit: SubmitHandler<IProduct> = data => {
         props.onUpdate(data);
+        alert("Cập nhật sản phẩm thành công")
         navigate('/admin/products')
     }
 
     return (
-        <form  {...layout}
-            name="nest-messages"
-            style={{ maxWidth: 1000 }}
-            onSubmit={handleSubmit(onHandleSubmit)}
-        // onFinishFailed={onFinishFailed}
-        // validateMessages={validateMessages}
+        <form onSubmit={handleSubmit(onHandleSubmit)}>
+            <div className="mb-3">
+                <label className="form-label">Tên sản phẩm</label>
+                <input  {...register('Name', { required: true })} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Nhập tên sản phẩm" />
+            </div>
+            <div className="mb-3">
+                <label className="form-label">Giá sản phẩm</label>
+                <input  {...register('Price', { required: true })} type="number" className="form-control" id="exampleFormControlInput1" placeholder="Nhập giá sản phẩm" />
+            </div>
+            <div className="mb-3">
+                <label className="form-label">Ảnh sản phẩm</label>
+                <input className="form-control" type="file" id="formFileMultiple" multiple  {...register('images', { required: true })}
+                // onChange={(event: any) =>
+                // setImage(event.target.files[0])}
+                />
+            </div>
+            <select className="form-select" aria-label="Default select example" {...register('categoryId', { required: true })}>
+                {categories.map((item) => (
+                    <option value={item._id}{...register('categoryId')}>{item.name}</option>
+                ))}
 
-        >
-            <Form.Item label="Name" name='Name' rules={[{ required: true }]}>
-                <input {...register('Name')} />
-            </Form.Item>
-            <Form.Item label="Price" rules={[{ required: true }]}>
-                <input {...register('Price')} />
-            </Form.Item>
-            <Form.Item label="Image" rules={[{ required: true }]}{...register('images')}>
-                <Upload
-                // action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-                // listType="picture"
-                // defaultFileList={[...fileList]}
-                // className="upload-list-inline"
-                >
-                    <Button icon={<UploadOutlined />}>Upload</Button>
-                </Upload>
-            </Form.Item>
-            <Form.Item label="Description" rules={[{ required: true }]}>
-                {/* <Input.TextArea /> */}
-                <textarea {...register('Description')}></textarea>
-            </Form.Item>
-            <Form.Item name='categoryId' label="Categories" rules={[{ required: true }]}>
-                <select >
-                    {categories.map((item) => (
-                        <option value={item._id}{...register('categoryId')}>{item.name}</option>
-
-                    ))}
-                    {/* {categories.map((item) => ( */}
-
-                </select>
-            </Form.Item>
-            <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 5 }}>
-                <Button type="primary" htmlType="submit">
-                    Submit
-                </Button>
-            </Form.Item>
-
+            </select >
+            <div className="mb-3">
+                <label className="form-label">Mô tả</label>
+                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"  {...register('Description', { required: true })} />
+            </div>
+            <button type="Submit" className="btn btn-primary">Submit</button>
         </form>
+
     )
 }
 

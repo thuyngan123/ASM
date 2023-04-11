@@ -1,4 +1,4 @@
-import Joi from "joi";
+import Joi, { trace } from "joi";
 // import Product from "../models/product";
 import Category from "../models/category";
 
@@ -69,4 +69,16 @@ export const create = async (req, res) => {
 
     }
 
+
+}
+export const remove = async (req, res) => {
+    try {
+        const category = await Category.findByIdAndDelete(req.params.id);
+        return res.json({
+            message: "Xóa danh mục thành công",
+            category,
+        })
+    } catch (error) {
+        message: error.message
+    }
 }

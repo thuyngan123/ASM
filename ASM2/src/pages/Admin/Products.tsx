@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom';
 import { getAll } from '../../api/product';
 import axios from 'axios';
 import cloundinary from 'cloudinary'
+import Category from './Category';
+import { ICategory } from '../../interface/category';
+import { getAllCategory } from '../../api/category';
+
 
 
 
@@ -30,6 +34,10 @@ interface ImageState {
 }
 
 const Products = (props: IProductsListProps) => {
+    const inpForm = {
+        "margin-bottom": 20,
+        "color": "red"
+    }
     const confirm = () => {
         message.info('Clicked on Yes.');
     };
@@ -81,17 +89,7 @@ const Products = (props: IProductsListProps) => {
 
                 <Space size="middle">
                     <div>
-                        <Popconfirm
-                            placement="topLeft"
-                            title='mày có muốn xóa không ?'
-                            description='Xóa thì đừng có tiếc !'
-                            onConfirm={confirm}
-                            okText="Yes"
-                            cancelText="No"
-                        >
-
-                            <Button type="primary" style={{ backgroundColor: 'red' }} onClick={() => removeProduct(record._id)}>Remove</Button>
-                        </Popconfirm>
+                        <Button type="primary" style={{ backgroundColor: 'red' }} onClick={() => removeProduct(record._id)}>Remove</Button>
                     </div>
 
                     {/* <Button type="primary" style={{ backgroundColor: 'red' }} onClick={() => removeProduct(record.id)}>Remove</Button> */}
@@ -100,13 +98,6 @@ const Products = (props: IProductsListProps) => {
             ),
         },
     ];
-    // const product: IProduct[] = props.products.map((item: IProduct) => {
-    //     return {
-    //         key: item._id,
-    //         ...item
-
-    //     }
-    // })
 
     //   Search
     const [filteProduct, setFilterProducts] = useState<IProduct[]>([]);
@@ -124,6 +115,10 @@ const Products = (props: IProductsListProps) => {
             setFilterProducts(results)
         })
     }
+    const [category, setcategory] = useState<ICategory[]>([]);
+    useEffect(() => {
+        getAllCategory().then(({ data }) => setcategory(data));
+    }, [])
     const [input, setInput] = useState([]);
     // console.log(input);
     const handleChange = (value: any) => {
@@ -144,16 +139,33 @@ const Products = (props: IProductsListProps) => {
 
         }
     })
+    //Lọc danh mục
+    const [products, setProducts] = useState<IProduct[]>([])
+    const filterCatIdPro = (_id: any) => {
+        if (products.length > 1) {
+            const result = products.filter((product) => {
+                return product.categoryId === _id;
+            })
+            setProducts(result);
+        } else {
+            console.log('No products')
+        }
+
+    }
 
     return (
         <div>
             <form>
-                <input className="my-3" placeholder='Search...' value={input} onChange={(e) => handleChange(e.target.value)}>
-                    {/* <Form placeholder='Search...' onChange={(e) => setsearch(e.target.value)} /> */}
-                </input>
-                {/* <button onClick={handleSearchClick}>Submit</button> */}
-
+                <input style={inpForm} className="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." value={input} onChange={(e) => handleChange(e.target.value)} />
             </form>
+            <div>
+
+                {category.map((cate: ICategory) => (
+                    <button onClick={() => filterCatIdPro(cate._id)}>{cate.name}</button>
+                ))}
+            </div>
+
+
             <Button type='primary'><Link to={'/admin/products/add'}>Add New Product</Link></Button>
             <Table columns={columns} dataSource={product} pagination={{ pageSize: 5 }} />
         </div>
